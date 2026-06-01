@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_customer_revenue
+    description: "Tabla de hechos con ingresos por cliente y país"
+    columns:
+      - name: id_cliente
+        description: "ID único del cliente"
+        tests:
+          - unique
+      - name: codigo_pais
+        description: "Código del país"
+      - name: ingresos_totales
+        description: "Total de ingresos por cliente"
+      - name: total_pedidos
+        description: "Cantidad total de pedidos por cliente"

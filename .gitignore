@@ -1,0 +1,6 @@
+target/
+logs/
+service_account.json
+.env
+profiles.yml
+dbt_internal_packages/

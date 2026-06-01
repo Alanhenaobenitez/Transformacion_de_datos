@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Modelo de staging para clientes"
+    columns:
+      - name: id_cliente
+        description: "ID único del cliente"
+        tests:
+          - unique
+      - name: nombre
+        description: "Nombre del cliente"
+      - name: codigo_pais
+        description: "Código del país"
+      - name: fecha_creacion
+        description: "Fecha de creación del cliente"
+
+  - name: stg_orders
+    description: "Modelo de staging para pedidos"
+    columns:
+      - name: id_pedido
+        description: "ID único del pedido"
+        tests:
+          - unique
+      - name: id_cliente
+        description: "ID del cliente"
+      - name: fecha_pedido
+        description: "Fecha del pedido"
+      - name: monto_total
+        description: "Monto total del pedido"
